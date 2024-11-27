@@ -15,7 +15,7 @@ import Loader from "../loader/loader";
         getProducts()
     },[])
     return <div >
-        <div className="row flex flex-wrap gap-x-4">
+        <div className="row flex flex-wrap gap-x-4 p-5">
           {products.length > 0 ? products.map(product => <>
         <ProductItem product={product}/>
         </>) : <Loader/>}
