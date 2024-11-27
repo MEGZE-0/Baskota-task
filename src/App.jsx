@@ -1,34 +1,36 @@
-
 import './App.css'
+import { Home } from './assets/components/Home/Home'
+import { NavBar } from './assets/components/NavBar/NavBar'
+import Gallery from './assets/components/Gallery/Gallery'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import LayOut from './components/LayOut/LayOut'
-import Home from './components/Home/Home'
-import About from './components/About/About'
-import Contact from './components/Contact/Contact'
-import OurWork from './components/OurWork/OurWork'
-import Footer from './components/Footer/Footer'
-import NavBar from './components/NavBar/NavBar'
-import NotFound from './components/NotFound/NotFound'
+import Footer from './assets/components/Footer/Footer'
+import LayOut from './assets/components/LayOut/LayOut'
+import NotFound from './assets/components/NotFound/NotFound'
+import Ux from './assets/components/Ux/Ux'
+import Mobile from './assets/components/Mobile/Mobile'
+import Web from './assets/components/Web/Web'
 
 function App() {
-let x =createBrowserRouter([
-{path:"",element:<LayOut/>,children:[
-{index:true,element:<Home/>},
-{path:"About",element:<About/>},
-{path:"Contact",element:<Contact/>},
-{path:"OurWork",element:<OurWork/>},
-{path:"Footer",element:<Footer/>},
-{path:"NavBar",element:<NavBar/>},
-{path:"*",element:<NotFound/>}
-]}
-
-])
+  let x=createBrowserRouter([
+    {path:"",element:<LayOut/>,children:[
+    {index:true,element:<Home/>},
+    {path:"footer",element:<Footer/>},
+    {path:"navbar",element:<NavBar/>},
+    {path:"gallery" ,element:<Gallery />,children:[
+      {path:"Ux",element:<Ux/>},
+      {path:"Mobile",element:<Mobile/>},
+      {path:"Web",element:<Web/>},
+    ]},
+    {path:"*",element:<NotFound/>}
+  ]}
+  ])
   return (
     <>
-     <RouterProvider router={x}>
+    <RouterProvider router={x}>
 
 
-</RouterProvider>
+    </RouterProvider>
+     
     </>
   )
 }
