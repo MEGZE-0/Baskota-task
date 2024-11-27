@@ -1,14 +1,16 @@
-import React from 'react'
-import NavBar from '../NavBar/NavBar'
+import { NavBar } from '../NavBar/NavBar'
 import Footer from '../Footer/Footer'
+import { Outlet } from 'react-router-dom'
 
 export default function LayOut() {
   return (
     <div>
         <NavBar/>
-       
-       <LayOut></LayOut>
+        <div className="container mx-auto py-4">
+
+        <Outlet></Outlet>
+        </div>
         <Footer/>
-    </div>
+        </div>
   )
 }
