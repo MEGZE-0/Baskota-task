@@ -1,0 +1,140 @@
+#root {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.shadow-md {
+  --tw-shadow: 0px 4px 10px rgba(0, 0, 0, 0) !important;
+  box-shadow: var(--tw-shadow) !important;
+}
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+.Button:hover {
+  color: #eeeeee;
+  background-color: #313032;
+}
+.toggle:hover {
+  color: #313032;
+}
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.slider-container {
+  display: flex; /* Lay slides horizontally */
+  flex-wrap: nowrap; /* Prevent wrapping to the next line */
+}
+
+.slide {
+  flex: 0 0 100%; /* Each slide takes up 100% of the container width */
+}
+#work-a,
+#work-s,
+#work-h {
+  flex: 1;
+  transition: flex 0.4s ease, filter 0.3s ease, transform 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.home-ourwork-details-a,
+.home-ourwork-details-s,
+.home-ourwork-details-h {
+  position: absolute;
+  top: 100%; /* Start below the container */
+  transition: top 0.3s ease;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background: rgba(50, 48, 49, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(7px);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+}
+
+#work-a:hover {
+  flex: 1.3;
+}
+
+#work-a:hover .home-ourwork-details-a {
+  top: 70%;
+}
+
+#work-a:hover ~ #work-s,
+#work-a:hover ~ #work-h {
+  flex: 0.8;
+}
+
+#work-s:hover {
+  flex: 1.3;
+}
+
+#work-s:hover .home-ourwork-details-s {
+  top: 70%;
+}
+
+#work-s:hover ~ #work-h,
+#work-s:hover ~ #work-a {
+  flex: 0.8;
+}
+
+#work-h:hover {
+  flex: 1.3;
+}
+
+#work-h:hover .home-ourwork-details-h {
+  top: 70%;
+}
+
+#work-h:hover ~ #work-a,
+#work-h:hover ~ #work-s {
+  flex: 0.8;
+}
+
+@media (max-width: 480px) {
+  #work-a:hover .home-ourwork-details-a,
+  #work-s:hover .home-ourwork-details-s,
+  #work-h:hover .home-ourwork-details-h {
+    top: 40%;
+  }
+}
+
+.shadow-lg {
+  --tw-shadow: none;
+  --tw-shadow-colored: none;
+  box-shadow: none;
+}
