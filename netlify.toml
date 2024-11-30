@@ -1,0 +1,16 @@
+[build]
+  # The directory containing the production build files
+  publish = "dist"
+
+  # The command to run to install dependencies and build your project
+  command = "npm install && npm run build"
+
+[dev]
+  # Port configuration for local development on Netlify Dev
+  framework = "vite"
+
+[[redirects]]
+  # Redirect all routes to the index.html for Single Page Applications
+  from = "/*"
+  to = "/index.html"
+  status = 200
