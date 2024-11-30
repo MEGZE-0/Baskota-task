@@ -1,6 +1,0 @@
-
-export default function Ux() {
-  return (
-    <div>Ux</div>
-  )
-}
